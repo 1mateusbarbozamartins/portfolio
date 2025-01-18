@@ -6,7 +6,8 @@ export default function Header() {
         <div className={`
             flex
             items-center
-            justify-evenly
+            md:justify-evenly
+            justify-around
             h-20
         `}>
             <Titulo />
