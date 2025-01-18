@@ -5,7 +5,7 @@ export default function Titulo() {
         <div>
             <ul>
                 <ItemMenu 
-                    name="MM."
+                    name="mbm."
                     link="/"
                     className="text-3xl font-bold text-[#2978B5]"
                 />
