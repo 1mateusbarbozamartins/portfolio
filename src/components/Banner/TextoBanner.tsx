@@ -8,7 +8,7 @@ export default function TextoBanner() {
             font-bold
         `}>
             <h1 className={`
-                text-5xl  
+                text-[6vw] lg:text-[3vw]
             `}>
                 Olá, sou o
                 <span
@@ -19,7 +19,7 @@ export default function TextoBanner() {
             </h1>
             <h2 className={`
                 mt-10
-                text-3xl 
+                text-[4vw] lg:text-[2vw]
             `}>
                 Um Programador FullStack.
             </h2>
