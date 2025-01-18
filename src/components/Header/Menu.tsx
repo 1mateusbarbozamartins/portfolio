@@ -8,7 +8,7 @@ export default function Menu() {
                 gap-10
                 uppercase
                 text-[#444444]
-                font-medium
+                font-bold
             `}>
                 <ItemMenu name="Home" />
                 <ItemMenu name="Projetos" />
