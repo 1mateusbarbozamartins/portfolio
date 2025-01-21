@@ -1,5 +1,5 @@
 import Banner from "@/components/Banner";
-import ListCards from "@/components/Body/Projetos/ListCards";
+import Projects from "@/components/Body/Projetos";
 import Header from "@/components/Header";
 
 export default function Home() {
@@ -7,7 +7,7 @@ export default function Home() {
     <div>
       <Header />
       <Banner />
-      <ListCards/>
+      <Projects/>
     </div>
   );
 }
