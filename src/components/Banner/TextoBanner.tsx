@@ -14,7 +14,7 @@ export default function TextoBanner() {
                 <span
                     className="pl-2 text-[#2978B5]"
                 >
-                    Mateus Martins.
+                    Mateus Martins!
                 </span>
             </h1>
             <h2 className={`

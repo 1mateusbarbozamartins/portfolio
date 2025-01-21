@@ -12,7 +12,7 @@ export default function Menu() {
     function renderizaListaMenu() {
         return (
             <>
-                <ItemMenu name="Home" />
+                <ItemMenu name="Home" link="/" />
                 <ItemMenu name="Projetos" />
                 <ItemMenu name="Certificados" />
                 <ItemMenu name="Blog" />
