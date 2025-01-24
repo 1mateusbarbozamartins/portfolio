@@ -1,9 +1,10 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { IconArrowLeft, IconArrowRight } from "@/components/icons";
 import Card from "./Card";
 import ProjectProps from "@/model/Project.model";
 
 export default function ListCards() {
+    const scrollContainerRef = useRef<HTMLDivElement>(null);
     const [projects, setProjects] = useState<ProjectProps[]>([]);
 
     useEffect(() => {
@@ -34,6 +35,18 @@ export default function ListCards() {
         setProjects(projects);
     }, []);
 
+    const scrollLeft = () => {
+        if (scrollContainerRef.current) {
+            scrollContainerRef.current.scrollBy({ left: -300, behavior: "smooth" });
+        }
+    };
+
+    const scrollRight = () => {
+        if (scrollContainerRef.current) {
+            scrollContainerRef.current.scrollBy({ left: 300, behavior: "smooth" });
+        }
+    };
+
     function renderProjects() {
         return projects.map((project, index) => (
             <li key={index} className="flex-shrink-0">
@@ -50,16 +63,16 @@ export default function ListCards() {
 
     return (
         <div className="flex flex-col items-center gap-2 w-full mb-10">
-            <div className="overflow-x-auto w-full p-10 scroll-hidden">
+            <div ref={scrollContainerRef} className="overflow-x-auto w-full flex justify-start p-10 scroll-hidden">
                 <ul className="flex gap-5 px-5 space-x-4 flex-shrink-0">
                     {renderProjects()}
                 </ul>
             </div>
 
             <div className="flex gap-2 items-center">
-                <button>{IconArrowLeft}</button>
+                <button onClick={scrollLeft}>{IconArrowLeft}</button>
                 <p>{projects.length ?? 0}</p>
-                <button>{IconArrowRight}</button>
+                <button onClick={scrollRight}>{IconArrowRight}</button>
             </div>
         </div>
     );
