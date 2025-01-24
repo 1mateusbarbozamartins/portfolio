@@ -17,7 +17,7 @@ export default function ListCards() {
             },
             {
                 title: "Quiz",
-                description: "Um pequeno jogo de perguntas e respostas, para praticar a utilização de Next.js e React",
+                description: "Um pequeno jogo de perguntas e respostas",
                 listTechStack: ["Next.js", "Typescript", "Tailwind", "Vercel"],
                 linkGitHub: "https://github.com/1mateusbarbozamartins/quiz-next",
                 linkVercel: "https://quiz-next-blond.vercel.app/",
