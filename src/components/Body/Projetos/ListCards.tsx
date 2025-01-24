@@ -50,7 +50,7 @@ export default function ListCards() {
 
     return (
         <div className="flex flex-col items-center gap-2 w-full mb-10">
-            <div className="overflow-x-auto w-[80%] p-10 scroll-hidden">
+            <div className="overflow-x-auto w-full p-10 scroll-hidden">
                 <ul className="flex gap-5 px-5 space-x-4 flex-shrink-0">
                     {renderProjects()}
                 </ul>
